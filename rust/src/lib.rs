@@ -8,6 +8,6 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-pub fn get_greeting() -> String {
-    return String::from("Hello SvelteKit from Rust!!!!!! :)");
+pub fn greet(name: String) -> String {
+    format!("Hello {} from Rust!!!!!! :)", name)
 }

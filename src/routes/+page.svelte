@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { get_greeting } from 'rust';
+	import { greet } from 'rust';
+
+	let name = '';
 </script>
 
-<h1>{get_greeting()}</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<input bind:value={name} placeholder="Enter your name" />
+<h1>{greet(name || 'SvelteKit')}</h1>
